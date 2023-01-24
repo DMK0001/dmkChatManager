@@ -1,0 +1,6 @@
+name: dmkChatManager
+version: '${project.version}'
+main: pl.dmk0001.chatmanager.ChatManager
+api-version: 1.19
+authors: [ DMK0001 ]
+website: https://github.com/DMK0001

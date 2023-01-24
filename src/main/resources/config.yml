@@ -1,0 +1,70 @@
+###########################################
+#           dmkChatManager                #
+#            Version: 0.1                 #
+#                                         #
+#           Author: DMK0001               #
+#                                         #
+#    Github: https://github.com/DMK0001   #
+###########################################
+
+config:
+  bStats: true
+  alertMessage: true
+
+  chat:
+    status: true
+    messages:
+      chatNoPerm: "&4&lError: &cYou aren't permitted to this command! &8(&7{PERM}&8)"
+      chatEnabled: "&8>> &aChat has been enabled!"
+      chatDisabled: "&8>> &cChat has been disabled!"
+      chatCleared: "&8>> &bChat has been cleared!"
+      chatCurrentlyDisabled: "&4&lError: &cChat is currently disabled!"
+      chatCurrentlyEnabled: "&4&lError: &cChat is currently enabled!"
+      chatEnabledAlert: "&6[dmkChatManager] &8>> &eChat has been &aenabled &eby &7{PLAYER}&e!"
+      chatDisabledAlert: "&6[dmkChatManager] &8>> &eChat has been &cdisabled &eby &7{PLAYER}&e!"
+      chatClearedAlert: "&6[dmkChatManager] &8>> &eChat has been &bcleared &eby &7{PLAYER}&e!"
+      chatIsDisabled: "&4&lError: &cYou can't write in chat because chat is disabled!"
+      chatConfigReload: "&8>> &eYou have successfully reloaded the configuration file!"
+    chatCommandUsage:
+      - ""
+      - "&8>>--------[ &6dmkChatManager - HELP &8]--------<<"
+      - "&8>> &e/chat off &8- &7Disables chat"
+      - "&8>> &e/chat on &8- &7Enables chat"
+      - "&8>> &e/chat clear &8- &7Clears the chat"
+      - "&8>> &e/chat slowmode &8- &7SlowMode management"
+      - "&8>> &e/chat playedtimemode &8- &7PlayedTimeMode managment"
+      - "&8>> &e/chat automessages &8- &7AutoMessages managment"
+      - "&8>> &e/chat reload &8- &7Configuration file reload"
+      - "&8>>--------[ &6dmkChatManager - HELP &8]--------<<"
+
+  chatSlowMode:
+    status: false
+    time: 3
+    messages:
+      chatSlowModeEnabled: "&8>> &aSlowMode has been enabled!"
+      chatSlowModeDisabled: "&8>> &cSlowMode has been disabled!"
+      chatSlowMode: "&4&lError: &cYou can't chat that often!"
+      chatSlowModeEnabledAlert: "&6[dmkChatManager] &8>> &eSlowMode on chat has been &aenabled &eby &7{PLAYER}&e!"
+      chatSlowModeDisabledAlert: "&6[dmkChatManager] &8>> &eSlowMode on chat has been &cdisabled &eby &7{PLAYER}&e!"
+
+  chatPlayedTimeMode:
+    status: false
+    time: 30
+    messages:
+      chatPlayedTimeModeEnabled: "&8>> &aChatPlayedTimeMode has been enabled!"
+      chatPlayedTimeModeDisabled: "&8>> &cChatPlayedTimeMode has been disabled!"
+      chatPlayedTimeMode: "&4&lError: &cYou can't write in chat because you haven't spent enough time on this server! &8(&c{YTIME}&7/&a{TIME} &7min.&8)"
+      chatPlayedTimeModeEnabledAlert: "&6[dmkChatManager] &8>> &ePlayedTimeMode on chat has been &aenabled &eby &7{PLAYER}&e!"
+      chatPlayedTimeModeDisabledAlert: "&6[dmkChatManager] &8>> &ePlayedTimeMode on chat has been &cdisabled &eby &7{PLAYER}&e!"
+
+  chatAutoMessages:
+    status: true
+    time: 1
+    messages:
+      chatAutoMessagesEnabled: "&8>> &aAutoMessages has been enabled!"
+      chatAutoMessagesDisabled: "&8>> &cAutoMessages has been disabled!"
+      chatAutoMessagesEnabledAlert: "&6[dmkChatManager] &8>> &eAutoMessages on chat has been &aenabled &eby &7{PLAYER}&e!"
+      chatAutoMessagesDisabledAlert: "&6[dmkChatManager] &8>> &eAutoMessages on chat has been &cdisabled &eby &7{PLAYER}&e!"
+    autoMessages:
+      - "&6[dmkChatManager] &8>> &eFirst auto message!"
+      - "&6[dmkChatManager] &8>> &eSecond auto message!"

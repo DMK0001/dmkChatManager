@@ -1,6 +1,7 @@
 
 # dmkChatManager - is a simple chat manager for your server.
 
+![alt text](https://i.imgur.com/OAnP1VJ.png)
 
 ## Features:
 ```

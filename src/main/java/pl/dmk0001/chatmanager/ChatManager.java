@@ -18,10 +18,11 @@ public final class ChatManager extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
+        new ConfigManager().load();
+
         if (ConfigManager.isbStats())
             new bStats(this, 17507);
 
-        new ConfigManager().load();
         getServer().getCommandMap().register("chat", new ChatCommand());
 
         PluginManager pluginManager = getServer().getPluginManager();

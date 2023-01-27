@@ -13,7 +13,7 @@ public class Utils {
     }
 
     public static void sendConsole(String string){
-        Bukkit.getConsoleSender().sendMessage(fixColor(string));
+        Bukkit.getConsoleSender().sendMessage(fixColor("&6[dmkChatManager] > " + string));
     }
 
     public static void sendMessage(CommandSender commandSender, String string){

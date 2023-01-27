@@ -2,7 +2,6 @@ package pl.dmk0001.chatmanager.tasks;
 
 import pl.dmk0001.chatmanager.manager.ConfigManager;
 import pl.dmk0001.chatmanager.utils.Utils;
-
 import java.util.List;
 
 public class AutoMessagesTask implements Runnable{

@@ -18,7 +18,7 @@ public class AsyncPlayerChatListener implements Listener {
         if (e.isCancelled()) return;
         Player player = e.getPlayer();
 
-        //Chat disabled
+        //ChatDisabled
         if (!ConfigManager.isChatStatus() && !player.hasPermission("dmkChatManager.bypass")){
             e.setCancelled(true);
             Utils.sendMessage(player, ConfigManager.getChatIsDisabled());

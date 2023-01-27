@@ -1,6 +1,6 @@
 ###########################################
 #           dmkChatManager                #
-#            Version: 0.1                 #
+#            Version: 0.2                 #
 #                                         #
 #           Author: DMK0001               #
 #                                         #
@@ -9,6 +9,7 @@
 
 config:
   bStats: true
+  updatePluginNotification: true
   alertMessage: true
 
   chat:
@@ -68,3 +69,26 @@ config:
     autoMessages:
       - "&6[dmkChatManager] &8>> &eFirst auto message!"
       - "&6[dmkChatManager] &8>> &eSecond auto message!"
+
+  customJoinMessage:
+    status: false
+    message: "&8[&a+&8] &a{PLAYER}"
+
+  customQuitMessage:
+    status: false
+    message: "&8[&c-&8] &c{PLAYER}"
+
+  newPlayerJoinMessage: "&8>> &eWelcome &6{PLAYER} &eto the server!"
+
+  welcomeMessage:
+    status: false
+    message:
+      - " "
+      - "&8>>--------[ &6Welcome Message &8]--------<<"
+      - "&8>> &eWelcome &6{PLAYER}&e!"
+      - " "
+      - "&8>> &6Players: &e{PLAYERS}&7/&6{MAX-PLAYERS}"
+      - "&8>> &6Website: &ewww.server.com"
+      - "&8>> &6Discord: &edc.server.com"
+      - "&8>>--------------------------------<<"
+      - " "

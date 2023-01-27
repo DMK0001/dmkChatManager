@@ -7,6 +7,7 @@ import java.util.List;
 public class ConfigManager {
 
     private static boolean bStats;
+    private static boolean updatePluginNotification;
     private static boolean alertMessage;
 
     private static boolean chatStatus;
@@ -47,10 +48,22 @@ public class ConfigManager {
     private static String chatAutoMessagesDisabledAlert;
     private static List<String> chatAutoMessagesList;
 
+    private static boolean customJoinMessageStatus;
+    private static String customJoinMessage;
+
+    private static boolean customQuitMessageStatus;
+    private static String customQuitMessage;
+
+    private static String newPlayerJoinMessage;
+
+    private static boolean welcomeMessageStatus;
+    private static List<String> welcomeMessage;
+
     public void load(){
         ChatManager.getInstance().saveDefaultConfig();
         FileConfiguration fileConfiguration = ChatManager.getInstance().getConfig();
         bStats = fileConfiguration.getBoolean("config.bStats");
+        updatePluginNotification = fileConfiguration.getBoolean("config.updatePluginNotification");
         alertMessage = fileConfiguration.getBoolean("config.alertMessage");
 
         chatStatus = fileConfiguration.getBoolean("config.chat.status");
@@ -90,11 +103,26 @@ public class ConfigManager {
         chatAutoMessagesEnabledAlert = fileConfiguration.getString("config.chatAutoMessages.messages.chatAutoMessagesEnabledAlert");
         chatAutoMessagesDisabledAlert = fileConfiguration.getString("config.chatAutoMessages.messages.chatAutoMessagesDisabledAlert");
         chatAutoMessagesList = fileConfiguration.getStringList("config.chatAutoMessages.autoMessages");
+
+        customJoinMessageStatus = fileConfiguration.getBoolean("config.customJoinMessage.status");
+        customJoinMessage = fileConfiguration.getString("config.customJoinMessage.message");
+
+        customQuitMessageStatus = fileConfiguration.getBoolean("config.customQuitMessage.status");
+        customQuitMessage = fileConfiguration.getString("config.customQuitMessage.message");
+
+        newPlayerJoinMessage = fileConfiguration.getString("config.newPlayerJoinMessage");
+
+        welcomeMessageStatus = fileConfiguration.getBoolean("config.welcomeMessage.status");
+        welcomeMessage = fileConfiguration.getStringList("config.welcomeMessage.message");
     }
 
     //Getters
     public static boolean isbStats() {
         return bStats;
+    }
+
+    public static boolean isUpdatePluginNotification() {
+        return updatePluginNotification;
     }
 
     public static boolean isChatStatus() {
@@ -235,6 +263,34 @@ public class ConfigManager {
 
     public static String getChatConfigReload() {
         return chatConfigReload;
+    }
+
+    public static String getCustomJoinMessage() {
+        return customJoinMessage;
+    }
+
+    public static String getCustomQuitMessage() {
+        return customQuitMessage;
+    }
+
+    public static String getNewPlayerJoinMessage() {
+        return newPlayerJoinMessage;
+    }
+
+    public static boolean isWelcomeMessageStatus() {
+        return welcomeMessageStatus;
+    }
+
+    public static List<String> getWelcomeMessage() {
+        return welcomeMessage;
+    }
+
+    public static boolean isCustomJoinMessageStatus() {
+        return customJoinMessageStatus;
+    }
+
+    public static boolean isCustomQuitMessageStatus() {
+        return customQuitMessageStatus;
     }
 
     //Setters

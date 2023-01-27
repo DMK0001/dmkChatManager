@@ -9,6 +9,9 @@
 - SlowMode: chat slow typing mode
 - PlayedTimeMode: the ability to write in the chat only after spending a certain amount of time on the server
 - timed automessages
+- a feature to send custom join/quit player message
+- a feature to sending messages about joining a new player to the server
+- a feature to send a welcome message to the player
 - all configurable in config.yml
 ```
 
